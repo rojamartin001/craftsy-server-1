@@ -12,7 +12,8 @@ crServer.use(router)
 crServer.use('/uploads',express.static('./uploads'))
 
 
-const PORT = 3000 || process.env.PORT
+const PORT = process.env.PORT || 3000;
+
 
 crServer.listen(PORT,()=>{
     console.log(`my crServer is running in ${PORT} and waiting for client request`);
